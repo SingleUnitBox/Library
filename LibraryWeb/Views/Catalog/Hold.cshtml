@@ -1,0 +1,20 @@
+﻿@using LibraryWeb.Models.CheckoutModels;
+@model CheckoutModel
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Model.ImageUrl" />
+    </div>
+    <div class="col-md-4">
+        <form method="post">
+            <input hidden asp-for="LibraryAssetId" />
+            <p>There are currently @Model.HoldCount holds in the queue for this item.</p>
+            <label>Please insert a Library Card Id</label>
+            <input class="form-control" type="text" asp-for="LibraryCardId" />
+            <div>
+                <button class="btn btn-success" type="submit" asp-action="PlaceHold" asp-route-assetId="LibraryAssetId">Place Hold</button>
+            </div>
+        </form>
+    </div>
+</div>

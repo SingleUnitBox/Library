@@ -1,0 +1,113 @@
+﻿@using LibraryUtilities;
+@using LibraryWeb.Models.Catalog;
+@model AssetDetailsModel
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="@Model.ImageUrl" />
+        </div>
+
+        <div class="col-md-4">
+            <p>@Model.Title</p>
+            <p>@Model.AuthorOrDirector</p>
+            <p><strong>@Model.Status</strong></p>
+            <p>@Model.Type</p>
+            <p>@Model.CurrentLocation</p>
+
+            @if (Model.Status == SD.Status_Lost)
+            {
+                <p>This item has been lost. It cannot be check out.</p>
+                <a class="btn btn-lg btn-danger" role="button" asp-action="MarkFound" asp-route-id="@Model.Id">Mark Found</a>
+            }
+
+            @if (Model.Status == SD.Status_CheckedOut)
+            {
+                <p>Checked Out By: @Model.PatronName</p>
+                <a class="btn btn-lg btn-success" role="button" asp-action="CheckIn" asp-route-id="@Model.Id">Check In</a>
+                <a class="btn btn-lg btn-warning" role="button" asp-action="Hold" asp-route-id="@Model.Id">Place Hold</a>
+            }
+            @if (Model.Status == SD.Status_Available)
+            {
+                <a class="btn btn-lg btn-info" role="button" asp-action="CheckOut" asp-route-id="@Model.Id">Check Out</a>                
+            }
+            @if (Model.Status != SD.Status_Lost)
+            {
+                <a class="btn btn-lg btn-danger" role="button" asp-action="MarkLost" asp-route-id="@Model.Id">Mark Lost</a>
+            }           
+        </div>
+        <div class="col-md-4">
+            <table class="table table-striped">
+                <tr>
+                    <td>
+                        ISBN:
+                    </td>
+                    <td>
+                        @Model.ISBN
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Call Number:
+                    </td>
+                    <td>
+                        @Model.DeweyCallNumber
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cost:
+                    </td>
+                    <td>
+                        @Model.Cost.ToString("c")
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h4>Checkout History</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Date Loaned</th>
+                            <th>Date Returned</th>
+                            <th>Card Id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var checkout in Model.CheckoutHistory)
+                        {
+                            <tr>
+                                <td>@checkout.CheckedOut</td>
+                                <td>@checkout.CheckedIn</td>
+                                <td>@checkout.LibraryCard.Id</td>
+                            </tr>
+                        }                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Current Holds</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Hold Placed</th>
+                            <th>Patron</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var hold in Model.CurrentHolds)
+                        {
+                            <tr>
+                                <td>@hold.HoldPlaced</td>
+                                <td>@hold.PatronName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿@using LibraryWeb.Models.CheckoutModels;
+@model CheckoutModel
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Model.ImageUrl" />
+    </div>
+    <div class="col-md-4">
+        <form method="post">
+            <input hidden asp-for="LibraryAssetId"/>
+            <label>Please insert a Library Card Id</label>
+            <input class="form-control" type="text" asp-for="LibraryCardId" />
+            <div>
+                <button class="btn btn-success" type="submit" asp-action="PlaceCheckout" asp-route-assetId="LibraryAssetId">Check Out</button>
+            </div>
+        </form>
+    </div>
+</div>

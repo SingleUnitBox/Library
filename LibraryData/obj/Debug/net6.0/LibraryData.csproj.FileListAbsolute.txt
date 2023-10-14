@@ -1,0 +1,14 @@
+C:\Users\czlom\source\repos\Library\LibraryData\bin\Debug\net6.0\LibraryData.deps.json
+C:\Users\czlom\source\repos\Library\LibraryData\bin\Debug\net6.0\LibraryData.runtimeconfig.json
+C:\Users\czlom\source\repos\Library\LibraryData\bin\Debug\net6.0\LibraryData.dll
+C:\Users\czlom\source\repos\Library\LibraryData\bin\Debug\net6.0\LibraryData.pdb
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.csproj.AssemblyReference.cache
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.AssemblyInfoInputs.cache
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.AssemblyInfo.cs
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.csproj.CoreCompileInputs.cache
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.dll
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\refint\LibraryData.dll
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.pdb
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\LibraryData.genruntimeconfig.cache
+C:\Users\czlom\source\repos\Library\LibraryData\obj\Debug\net6.0\ref\LibraryData.dll

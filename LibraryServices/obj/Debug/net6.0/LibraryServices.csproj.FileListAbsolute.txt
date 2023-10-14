@@ -1,0 +1,17 @@
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryServices.deps.json
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryServices.dll
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryServices.pdb
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryData.dll
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryData.pdb
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.csproj.AssemblyReference.cache
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.AssemblyInfoInputs.cache
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.AssemblyInfo.cs
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.csproj.CoreCompileInputs.cache
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.csproj.CopyComplete
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.dll
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\refint\LibraryServices.dll
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\LibraryServices.pdb
+C:\Users\czlom\source\repos\Library\LibraryServices\obj\Debug\net6.0\ref\LibraryServices.dll
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryUtilities.dll
+C:\Users\czlom\source\repos\Library\LibraryServices\bin\Debug\net6.0\LibraryUtilities.pdb
