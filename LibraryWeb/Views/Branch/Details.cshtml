@@ -1,0 +1,31 @@
+﻿@using LibraryWeb.Models.Branch;
+@model BranchDetailsModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h3>@ViewBag.Title</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <p>Address: @Model.Address</p>
+        <p>Phone Number: @Model.PhoneNumber</p>
+        <br />
+        <p>@Model.Description</p>
+        <ul>
+            @foreach (var date in Model.BranchHours)
+            {
+                <li>
+                    @date
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <p>Date Opened: @Model.OpenDate</p>
+        <p>Number of Patrons: @Model.Patrons.Count()</p>
+        <p>Number of Assets: @Model.LibraryAssets.Count()</p>
+        <p>Value of Assets: @Model.ValueOfAssets.ToString("c")</p>
+    </div>
+</div>

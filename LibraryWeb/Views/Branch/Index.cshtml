@@ -1,0 +1,48 @@
+﻿@using LibraryWeb.Models.Branch;
+
+@model BranchIndexModel
+
+<div>
+    <h3>Branch Index</h3>
+    <div>
+        <table class="table table-striped" id="catalogIndexTable">
+            <thead>
+                <tr>
+                    <th>
+                        Branch Name
+                    </th>
+                    <th>
+                        Open Now
+                    </th>
+                    <th>
+                        Number of Assets
+                    </th>
+                    <th>
+                        Number of Patrons
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var branch in Model.Branches)
+                {
+                    <tr>
+                        <td>
+                            <a asp-controller="Branch" asp-action="Details" asp-route-branchId="@branch.Id">
+                                @branch.Name
+                            </a>
+                        </td>
+                        <td>
+                            @branch.IsOpenedNow
+                        </td>
+                        <td>
+                            @branch.LibraryAssets.Count()
+                        </td>
+                        <td>
+                            @branch.Patrons.Count()
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -13,6 +13,8 @@ builder.Services.AddDbContext<LibraryDbContext>(options =>
 });
 builder.Services.AddScoped<ILibraryAssetService, LibraryAssetService>();
 builder.Services.AddScoped<ICheckoutService, CheckoutService>();
+builder.Services.AddScoped<IPatronService, PatronService>();
+builder.Services.AddScoped<IBranchService, BranchService>();
 
 var app = builder.Build();
 

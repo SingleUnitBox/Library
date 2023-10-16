@@ -1,0 +1,73 @@
+﻿@using LibraryWeb.Models.PatronModels;
+@model PatronDetailsModel
+
+@{
+    ViewBag.Title = "Patron Information";
+}
+
+<h3>@ViewBag.Title</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>@Model.FullName</h4>
+        <p>Library Card Id: @Model.LibraryCardId</p>
+        <p>Address: @Model.Address</p>
+        <p>Phone Number: @Model.PhoneNumber</p>
+        <p>Member Since: @Model.MemberSince.ToShortDateString()</p>
+        <p>Home Library: @Model.HomeLibrary</p>
+        @if (Model.Fees == 0)
+        {
+            <p><strong>No fees currently due</strong></p>
+        }
+        else
+        {
+            <p>Fees Due: @Model.Fees.ToString("c")</p>
+        }
+    </div>
+
+    <div class="col-md-4">
+        <h4>Assets Currently Checked Out</h4>
+        @if (Model.Checkouts.Any())
+        {
+            <ul>
+                @foreach (var asset in Model.Checkouts)
+                {
+                    <li>
+                        <p>@asset.LibraryAsset.Title - (Library Asset Id: @asset.LibraryAsset.Id)</p>
+                        <ul>
+                            <li>
+                                <p>Since: @asset.Since</p>
+                            </li>
+                            <li>
+                                <p>Due: @asset.Until</p>
+                            </li>
+                        </ul>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <div>No assets currently checked out.</div>
+        }
+    </div>
+    @if (Model.Holds.Any())
+    {
+        <div class="col-md-4">
+            <h4>Assets Currently On Hold</h4>
+            <ul>
+                @foreach (var asset in Model.Holds)
+                {
+                    <li>
+                        <p>@asset.LibraryAsset.Title - Placed @asset.HoldPlaced</p>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+    else
+    {
+        <div>No assets currently on hold.</div>
+    }
+
+</div>
